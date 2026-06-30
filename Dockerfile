@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
 
 # Copy the csproj and restore as distinct layers
-COPY *.csproj ./
+COPY *.csproj ./ 
 RUN dotnet restore 
 
 # Copy the rest of the application and build it
